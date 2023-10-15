@@ -4,7 +4,7 @@ import {Button} from "@/components/ui/button.tsx";
 export const AboutPage = () => {
   return (
     <div className={'w-full'}>
-      <img className={'block w-full mb-12'} src={'src/assets/images/image_5512.jpg'} alt=""/>
+      <img className={'block w-full mb-12'} src={'/assets/images/image_5512.jpg'} alt=""/>
       <MaxWidthContainer>
         <section>
           <h3 className={'text-[#161616] font-bold text-3xl mb-8'}>

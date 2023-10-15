@@ -24,6 +24,9 @@ export default {
       fontFamily: {
         'Inter': ["'Inter', sans-serif", ...DefaultTheme.fontFamily.serif],
       },
+      backgroundImage: {
+        homePage: "url('src/assets/images/image-54.jpg')",
+      },
       height: {
         // 'app': "var(--app-height)"
         'app': 'calc(var(--vh, 1vh) * 100)'

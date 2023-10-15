@@ -1,9 +1,8 @@
 import {MaxWidthContainer} from "@/components/MaxWidthContainer.tsx";
-import {Button} from "@/components/ui/button.tsx";
-
+import {Link} from "react-router-dom";
 export const HomePage = () => {
   return (
-    <div className={'w-full bg-[url("src/assets/images/image-54.jpg")] bg-cover bg-no-repeat bg-center'}>
+    <div className={'homepage bg-cover bg-no-repeat bg-center w-full'}>
       <MaxWidthContainer className={'h-full'}>
         <div className={'h-full flex flex-col justify-center'}>
           <h2 className={'text-white font-extrabold text-3xl mb-[22px]'}>
@@ -12,9 +11,9 @@ export const HomePage = () => {
           <p className={'text-white mb-[50px]'}>
             Add adventure to your life by joining the #vanlife movement. Rent the perfect van to make your perfect road trip.
           </p>
-          <Button className={'bg-[#FF8C38] w-full'}>
+          <Link className={'bg-[#FF8C38] h-10 px-4 py-2 text-center text-primary-foreground rounded hover:bg-[#FF8C38]/80'} to={'/vans'}>
             Find your van
-          </Button>
+          </Link>
         </div>
       </MaxWidthContainer>
     </div>
