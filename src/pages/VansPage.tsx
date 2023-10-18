@@ -64,27 +64,34 @@ export const VansPage = () => {
           {/*<Link className={'px-4 py-2'} to={genNewSearchParamString('type', null)}>Clear Filters</Link>*/}
 
           {/* variant with buttons and setSearchParams*/}
-          {links?.map(link => (
-            <Button
-              variant={'outline'}
-              key={link}
-              onClick={() => handleFilterChange('type', link)}
-            >
-              {link}
-            </Button>
-          ))}
-          <Button variant={'link'} onClick={() => handleFilterChange('type', null)}>
-            Clear filter
-          </Button>
 
+          {
+            links?.map(link => (
+              <Button
+                variant={'outline'}
+                className={link === typeFilter ? 'border-x-lime-700': ''}
+                key={link}
+                onClick={() => handleFilterChange('type', link)}
+              >
+                {link}
+              </Button>
+            ))
+          }
+          {
+            typeFilter ? (
+              <Button variant={'link'} onClick={() => handleFilterChange('type', null)}>
+                Clear filter
+              </Button>
+            ) : null
+          }
         </div>
         {isLoading
           ? <div>Loading...</div>
           : <div className={'w-full gap-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mb-4'}>
               {
                 displayedVans.map(van => (
-                  <div className={''} key={van.id}>
-                    <Link to={`/vans/${van.id}`}>
+                  <div key={van.id}>
+                    <Link to={van.id} state={{search: `?${searchParams.toString()}`}}>
                       <div className={'overflow-hidden rounded-md mb-3'}>
                         <img className={'w-full h-auto object-cover object-center'} src={van.imageUrl} alt=""/>
                       </div>

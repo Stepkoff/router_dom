@@ -12,7 +12,7 @@ export const HostLayout = () => {
               ? cn('text-black underline underline-offset-4 font-semibold')
               : cn('text-[#4d4d4d] font-semibold')
             }
-            to={'/host'}
+            to={'.'}
             end
           >
             Dashboard
@@ -22,7 +22,7 @@ export const HostLayout = () => {
               ? cn('text-black underline underline-offset-4 font-semibold')
               : cn('text-[#4d4d4d] font-semibold')
             }
-            to={'/host/income'}
+            to={'income'}
           >
             Income
           </NavLink>
@@ -31,7 +31,7 @@ export const HostLayout = () => {
               ? cn('text-black underline underline-offset-4 font-semibold')
               : cn('text-[#4d4d4d] font-semibold')
             }
-            to={'/host/vans'}
+            to={'vans'}
           >
             Vans
           </NavLink>
@@ -40,7 +40,7 @@ export const HostLayout = () => {
               ? cn('text-black underline underline-offset-4 font-semibold')
               : cn('text-[#4d4d4d] font-semibold')
             }
-            to={'/host/reviews'}
+            to={'reviews'}
           >
             Reviews
           </NavLink>
